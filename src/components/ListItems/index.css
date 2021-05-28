@@ -1,0 +1,23 @@
+.search-list{
+    width: 400px;
+    padding: 16px 24px;
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #2d2f30;
+    color: #f2f2f2;
+    border-radius: 25px;
+}
+.search-list > div > p{
+    margin: 0;
+}
+.search-list div:nth-child(1) > span{
+    color: grey;
+    font-size: 12px;
+    margin: 0;
+}
+.search-list div:nth-child(2) > p{
+    color: grey;
+    font-size: 15px;
+}
