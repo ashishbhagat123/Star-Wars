@@ -1,9 +1,9 @@
 import axios from "axios"
 
 // Action types
-const FETCH_PERSONS = "FETCH_PERSONS"
-const FETCH_PERSONS_SUCCESS = "FETCH_PERSONS_SUCCESS"
-const FETCH_PERSONS_FAILURE = "FETCH_PERSONS_FAILURE"
+export const FETCH_PERSONS = "FETCH_PERSONS"
+export const FETCH_PERSONS_SUCCESS = "FETCH_PERSONS_SUCCESS"
+export const FETCH_PERSONS_FAILURE = "FETCH_PERSONS_FAILURE"
 
 // Sending request 
 const getPerson = () => {
@@ -19,10 +19,18 @@ const getPersonSuccess = (payload) => {
         payload
     }
 }
-// Getting error from api
+// Receiving error from api
 const getPersonFailure = () => {
     return {
         type: FETCH_PERSONS_FAILURE
     }
+}
+
+// Api call on input change 
+export const getData = (character) => (dispatch) => {
+    dispatch(getPerson())
+    return axios.get(`https://swapi.dev/api/people/?search=${character}`)
+    .then(res => dispatch(getPersonSuccess(res.data.results)))
+    .then(err => getPersonFailure(err))
 }
 
