@@ -2,7 +2,13 @@
     color: #ecd014;
 }
 .person img{
+    z-index: 1;
     width: 100vw;
-    height: fit-content;
-    z-index: -1;
+    height: 99vh;
+}
+
+@media only screen and (max-width: 768px){
+    .person img{
+        height: 99vh;
+    }
 }

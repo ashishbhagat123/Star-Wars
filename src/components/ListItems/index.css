@@ -27,3 +27,8 @@
     color: grey;
     font-size: 15px;
 }
+@media only screen and (max-width: 768px){
+    .search-list{
+        width: 250px;
+    }
+}

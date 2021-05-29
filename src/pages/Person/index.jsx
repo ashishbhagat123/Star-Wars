@@ -1,30 +1,31 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { getData } from '../../redux/persons/actions';
 import './index.css';
-import PersonCard from "../../components/PersonCard/index"
+import Details from "../../components/PersonDetails/index"
+import jedi from "../../images/star.jpg"
 
 function Person() {
   const [character, setCharacter] = useState(false)
   const params = useParams()
   const {id} = params
   const dispatch = useDispatch()
-  const {data,isLoading, isError} = useSelector(state => state)
-
+  const {data, isError, errmessege} = useSelector(state => state)
 
   useEffect(() => {
-    dispatch(getData(id))
-    console.log(data)
+    if(data.length === 0){
+      dispatch(getData(id))
+    }
     let char = data.filter((e) => e.name === id)
       setCharacter(char[0])
-  }, [isLoading, id])
+  }, [data])
 
   return (
     <div className="person">
-      <img src="https://swall.teahub.io/photos/small/24-247478_star-wars-4k-hd-desktop-wallpaper-for.jpg" alt="star wars"/>
-      {isError && "something not right"}
-      {character && <PersonCard data = {character} />}
+      <img src={jedi} alt="star wars"/>
+      {isError && <div>{errmessege}</div>}
+      {character && <Details data = {character} />}
     </div>
   );
 }
