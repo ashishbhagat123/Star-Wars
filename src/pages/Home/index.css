@@ -40,9 +40,13 @@
 .search-div {
     position: relative;
 }
+.no_data_alert{
+    text-align: center;
+    color: goldenrod;
+}
 .cross {
     position: absolute;
-    color: black;
+    color: rgb(22, 21, 21);
     cursor: pointer;
     top: 16px;
     font-weight: 100;
@@ -69,15 +73,15 @@
     right: 9px;
     border: none;
 }
-
+.search-button .close{
+    color: white;
+}
 .search-button svg {
     font-weight: 900;
     font-size: 22px;
 }
 .loader {
-    position: absolute;
-    top: 10px;
-    right: 13px;
+
     border: 4px dashed goldenrod;
     border-radius: 50%;
     width: 20px;
@@ -85,7 +89,35 @@
     animation: spin 2s linear infinite;
   }
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  .loader {
+    height: 0;
+    width: 0;
+    padding: 12px;
+    border: 6px dotted goldenrod;
+    border-right-color: orange;
+    border-radius: 22px;
+    animation: rotate 1s infinite linear;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+  }
+  
+  @keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+       use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .search-input{
+          width: 250px;
+      }
+      .list{
+          width: 298px!important;
+      }
+      .search-button{
+          top: 8px;
+      }
   }

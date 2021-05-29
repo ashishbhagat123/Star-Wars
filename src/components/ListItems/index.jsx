@@ -1,16 +1,17 @@
 import React from "react";
 import "./index.css";
 
-const Lists = ({ data, i, active,setActive, handleIndex, handlePerson }) => {
+const ListItem = ({ data, index, activeIndex,setActiveIndex, handleIndex, showCharacterDetails,onRef}) => {
     const { name, birth_year, gender } = data;
 
     // Displaying Items on search list
     return (
         <div
-            style={active === i ? { background: "darkgoldenrod", borderRadius:"0", color:"black" } : null}
+            ref={(el) => onRef(el)}
+            style={activeIndex === index ? { background: "darkgoldenrod", borderRadius:"0", color:"black" } : null}
             onKeyUp = {(e) => handleIndex(e)}
-            onMouseEnter = {() => setActive(i)}
-            onClick={() => handlePerson(name)}
+            onMouseEnter = {() => setActiveIndex(activeIndex)}
+            onClick={() => showCharacterDetails(name)}
             className="search-list"
         >
             <div>
@@ -24,4 +25,4 @@ const Lists = ({ data, i, active,setActive, handleIndex, handlePerson }) => {
     );
 };
 
-export default Lists;
+export default ListItem;
