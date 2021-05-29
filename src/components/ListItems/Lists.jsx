@@ -1,8 +1,9 @@
 import React from "react";
 import "./index.css";
 
-const index = ({data}) => {
+const Lists = ({data, i}) => {
     const {name, birth_year, gender } = data
+
 
     // Displaying Items on search list
     return (
@@ -18,4 +19,4 @@ const index = ({data}) => {
     );
 };
 
-export default index;
+export default Lists;

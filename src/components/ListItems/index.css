@@ -9,6 +9,12 @@
     color: #f2f2f2;
     border-radius: 25px;
 }
+.search-list:hover{
+    cursor: pointer;
+    background-color: darkgoldenrod;
+    color: black;
+    border-radius: 0;
+}
 .search-list > div > p{
     margin: 0;
 }

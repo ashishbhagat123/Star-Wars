@@ -14,6 +14,11 @@ const getPerson = () => {
 
 // Getting data from Api
 const getPersonSuccess = (payload) => {
+    if(payload === undefined){
+        payload = []
+    } else if(payload.length === 0){
+        payload = "no result"
+    } 
     return {
         type: FETCH_PERSONS_SUCCESS,
         payload
@@ -28,9 +33,14 @@ const getPersonFailure = () => {
 
 // Api call on input change 
 export const getData = (character) => (dispatch) => {
-    dispatch(getPerson())
-    return axios.get(`https://swapi.dev/api/people/?search=${character}`)
-    .then(res => dispatch(getPersonSuccess(res.data.results)))
-    .then(err => getPersonFailure(err))
+    if(character.length !== 0){
+        dispatch(getPerson())
+        return axios.get(`https://swapi.dev/api/people/?search=${character}`)
+        .then(res =>  dispatch(getPersonSuccess(res.data.results)))
+        .then(err => getPersonFailure(err))
+    }
+    else {
+        dispatch(getPersonSuccess())
+    }
 }
 
