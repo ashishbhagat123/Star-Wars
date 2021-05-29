@@ -1,6 +1,7 @@
 
 // Debouncer for delaying the api call 
-export const debounce = (callback, timeout = 500) => {
+
+export const debounce = (callback, timeout = 1000) => {
     let timer
     return (e) => {
         timer && clearTimeout(timer)
