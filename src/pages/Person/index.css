@@ -1,3 +1,8 @@
 .person h1 {
     color: #ecd014;
 }
+.person img{
+    width: 100vw;
+    height: fit-content;
+    z-index: -1;
+}

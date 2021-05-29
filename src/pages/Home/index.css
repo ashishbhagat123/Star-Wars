@@ -4,9 +4,7 @@
     border-radius: 25px;
     border: 0;
     outline: 0;
-
     font-size: 16px;
-
     background: #2d2f30;
     color: #f2f2f2;
 }
@@ -23,8 +21,10 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     background: #2d2f30;
-    max-height: 300px;
+    max-height: 200px;
     overflow: auto;
+    position: absolute;
+    width: 448px!important;
 }
 .list::-webkit-scrollbar {
     display: none;
@@ -34,7 +34,7 @@
 .list h2 {
     align-self: center;
     color: #e4cd1c;
-    padding: 3%;
+    padding: 2%;
     margin: 0;
 }
 .search-div {
@@ -42,9 +42,21 @@
 }
 .cross {
     position: absolute;
-    color: white;
-    top: 10px;
+    color: black;
+    cursor: pointer;
+    top: 16px;
+    font-weight: 100;
+    font-size: large;
+    right: 70px;
 }
+.cross span {
+    position: absolute;
+    font-weight: 300;
+    font-size: 25px;
+    top: -7px;
+    margin-left: 50%;
+}
+
 .search-button {
     width: fit-content;
     padding: 1.5%;
@@ -57,12 +69,23 @@
     right: 9px;
     border: none;
 }
+
 .search-button svg {
     font-weight: 900;
     font-size: 22px;
 }
 .loader {
     position: absolute;
-    top: 5px;
-    right: 9px;
-}
+    top: 10px;
+    right: 13px;
+    border: 4px dashed goldenrod;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
