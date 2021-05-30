@@ -7,8 +7,9 @@
     border-radius: 25px;
     padding: 20px 50px;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 10%;
+    min-width: 300px;
 }
 
 .person-card hr{
@@ -48,7 +49,9 @@
 @media only screen and (max-width: 768px){
     .person-card{
         top: 30%;
-        left: 12%;
+        left: 11%;
+        max-width: 200px;
+        min-width: 80px;
     }
     .person-card > div{
         flex-direction: column;
