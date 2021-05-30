@@ -8,6 +8,10 @@ To create this following Tech stack is used by contributors:
 *  **ReactJS**
 * **Axios**
 * **React-icons**
+# Features
+* **User can search their favourie Star Wars character.**
+* **User can go through the suggestion list either by scrolling through mouse or by using arrow keys.**
+* **User can see thier character details on the person page when they click on the item present in suggestion list.**
 # Screenshots:
 Some Screenshots of the Application
 ### App on large screens
