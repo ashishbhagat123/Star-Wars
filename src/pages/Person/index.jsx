@@ -4,7 +4,6 @@ import { useParams } from 'react-router';
 import { getData } from '../../redux/persons/actions';
 import './index.css';
 import Details from "../../components/PersonDetails/index"
-import jedi from "../../images/star.jpg"
 
 function Person() {
   const [character, setCharacter] = useState(false)
@@ -23,7 +22,7 @@ function Person() {
 
   return (
     <div className="person">
-      <img src={jedi} alt="star wars"/>
+      <img src="https://cdn.wallpapersafari.com/14/39/ei4ygl.jpg" alt="star wars"/>
       {isError && <div>{errmessege}</div>}
       {character && <Details data = {character} />}
     </div>
