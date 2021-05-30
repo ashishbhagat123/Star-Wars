@@ -8,7 +8,6 @@ To create this following Tech stack is used by contributors:
 *  **ReactJS**
 * **Axios**
 * **React-icons**
-* 
 # Screenshots:
 Some Screenshots of the Application
 ### App on large screens
