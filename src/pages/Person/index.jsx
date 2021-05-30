@@ -12,6 +12,7 @@ function Person() {
   const dispatch = useDispatch()
   const {data, isError, errmessege} = useSelector(state => state)
 
+  // calling api on refresh of page if data is not available in store
   useEffect(() => {
     if(data.length === 0){
       dispatch(getData(id))

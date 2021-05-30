@@ -7,7 +7,7 @@ const initState = {
     isError : false,
     success: true,
     messege: "No result found",
-    errMessege: "Something went wrong"
+    errmessege: "Something went wrong"
 }
 
 // Updating state based on user response

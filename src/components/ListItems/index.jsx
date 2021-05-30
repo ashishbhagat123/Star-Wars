@@ -4,7 +4,7 @@ import "./index.css";
 const ListItem = ({ data, index, activeIndex,setActiveIndex, handleIndex, showCharacterDetails,onRef}) => {
     const { name, birth_year, gender } = data;
 
-    // Displaying Items on search list
+    // Displaying Items on suggestion list
     return (
         <div
             ref={(el) => onRef(el)}

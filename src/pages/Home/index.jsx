@@ -17,11 +17,12 @@ function HomePage() {
     const [activeIndex, setActiveIndex] = useState(-1);
     const [loader, setLoader] = useState(false);
     const history = useHistory();
-    const ref = useRef();
+    const inputRef = useRef();
     const itemRefs = {};
 
+    // Focusing on input fiels when page reloads
     useEffect(() => {
-        ref.current.focus();
+        inputRef.current.focus();
     }, []);
 
     // getting data from store
@@ -48,7 +49,7 @@ function HomePage() {
 
     // called when user click on cancel button in search bar
     const onCancel = () => {
-        ref.current.value = "";
+        inputRef.current.value = "";
         setQuery("")
         setCharacters([]);
     };
@@ -98,7 +99,7 @@ function HomePage() {
             <div onKeyUp={onListScroll}>
                 <div className="search-div">
                     <input
-                        ref={ref}
+                        ref={inputRef}
                         className="search-input"
                         style={
                             !loader && characters.length !== 0
@@ -115,29 +116,36 @@ function HomePage() {
                         }}
                         placeholder="Search by name"
                     />
+                    {/* Showing close button on input field after getting result from api */}
                     {!loader && query.length !== 0 && (
                         <div className="cross" onClick={onCancel}>
                             <IoClose color = "white" /> <span>|</span>{" "}
                         </div>
                     )}
+                    {/* Showing Search button when before and after fetching the data from api*/}
                     {!loader ? (
                         <div onClick={handleChange} className="search-button">
                             <IoSearch />
                         </div>
                     ) : (
+                    /* Showing Loader when user is typing on input field*/
                         <div className="loader"></div>
                     )}
                 </div>
                 {/* Error handling and data Displaying */}
                 {isError ? (
+                // Error messege when if there is some error while fetching the data
                     <div className="no_data_alert">
                         <h2>{errmessege}</h2>
                     </div>
-                ) : !loader && !success && query.length > 0? (
+                ) : 
+                // No Data messege when there is no related suggestion for user query in input field
+                !loader && !success && query.length > 0? (
                     <div className="no_data_alert">
                         <h2>{messege}</h2>
                     </div>
                 ) : (
+                    // Displaying available suggestions when user search someting on input field
                     <div className="list">
                         {!loader &&
                             characters?.map((e, i) => (
