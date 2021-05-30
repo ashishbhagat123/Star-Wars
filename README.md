@@ -1,4 +1,4 @@
-### A WebApp where user can find out details about their favorite character in Star Wars 
+### A WebApp where users can find out details about their favorite character in Star Wars 
 # Tech Stack
 To create this following Tech stack is used by contributors:
 * **HTML**
