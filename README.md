@@ -8,8 +8,7 @@ To create this following Tech stack is used by contributors:
 *  **ReactJS**
 * **Axios**
 * **React-icons**
-# Acknowledgments
-* **Utilized React redux for state management and react-router-dom for routing of app**
+* 
 # Screenshots:
 Some Screenshots of the Application
 ### App on large screens
