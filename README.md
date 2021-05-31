@@ -19,7 +19,7 @@ Some Screenshots of the Application
 ![Medium ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/DetailsPage.png)
 ### App on medium Screens
 ![Medium ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/HomePageTablet.png)
-![Medium ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/Tablet%20Details.png)
+![Medium ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/TabletDetails.png)
 ### App on small Screens
 ![Small ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/HomePageMobile.png)
 ![Small ScreenSize](https://github.com/ashishbhagat123/Star-Wars/blob/master/src/images/MobileDetails.png)
