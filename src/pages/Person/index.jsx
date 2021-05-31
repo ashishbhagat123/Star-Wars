@@ -32,7 +32,6 @@ function Person() {
     
     return (
         <div className="person">
-          <img src= "https://c4.wallpaperflare.com/wallpaper/975/888/22/humor-star-wars-darth-vader-cigarettes-wallpaper-preview.jpg" alt="vadar"/>
             {isError && <div>{errmessege}</div>}
             {character &&  <Details data = {character} />}
             {character === undefined && <NotFound />}

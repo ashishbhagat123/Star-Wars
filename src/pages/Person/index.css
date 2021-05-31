@@ -4,37 +4,17 @@
 .person h1 {
     color: #ecd014;
 }
-.person img{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
 .person a{
-    position: fixed;
-    top: 50px;
     text-decoration: none;
     padding: 8px;
     width: 100px;
     border: 1px solid goldenrod;
     text-align: center;
     color: goldenrod;
-    left: 100px;
+    display: block;
+    margin: 40px auto;
 }
 .person a:hover{
     border-color: maroon;
     color: maroon;
-}
-
-@media only screen and (max-width: 1024px){
-    .person img{
-        height: 99vh;
-        display: none;
-    }
-    .person a{
-        position: static;
-        display: block;
-        margin: 40px auto;
-    }
 }

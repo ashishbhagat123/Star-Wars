@@ -1,4 +1,4 @@
-### A WebApp to find out details about your favourite character in Star Wars
+### A WebApp where users can find out details about their favorite character in Star Wars 
 # Tech Stack
 To create this following Tech stack is used by contributors:
 * **HTML**
@@ -8,8 +8,10 @@ To create this following Tech stack is used by contributors:
 *  **ReactJS**
 * **Axios**
 * **React-icons**
-# Acknowledgments
-* **Utilized React redux for state management and react-router-dom for routing of app**
+# Features
+* **User can search their favourie Star Wars character.**
+* **User can go through the suggestion list either by scrolling through mouse or by using arrow keys.**
+* **User can see thier character details on the person page when they click on the item present in suggestion list.**
 # Screenshots:
 Some Screenshots of the Application
 ### App on large screens

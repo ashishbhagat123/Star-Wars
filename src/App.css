@@ -1,6 +1,9 @@
 .app {
     min-height: 100vh;
-    background: #110b0b;
+    background: url("https://images.alphacoders.com/107/107763.jpg");
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size:cover;
 
     display: flex;
     flex-direction: column;
