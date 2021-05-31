@@ -1,41 +1,41 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { getData } from "../../redux/persons/actions";
+import React from "react"
 import "./index.css";
 
 const Details = ({ data }) => {
-    const { name, eye_color, height, mass, skin_color } = data;
-    const dispatch = useDispatch()
-
-    // clear all search data in homepage when user click on back button
-    const clearStoreData = () => {
-        dispatch(getData(""))
-    }
-
+    const { name, eye_color, height, mass, skin_color, gender, hair_color } = data;
+    console.log(data)
     return (
         <div className="person-card">
             <h1>{name}</h1>
             <hr />
-            <div>
-                <div>
-                    <h2>Eye Color:</h2>
-                    <h2>{eye_color}</h2>
+            <div className = "details">
+                <div >
+                    <div><h2>Gender</h2></div>
+                    <div><h2>{gender}</h2></div>
                 </div>
                 <div>
-                    <h2>Skin Color:</h2>
-                    <h2>{skin_color}</h2>
+                    <div><h2>Height:</h2></div>
+                    <div><h2>{height}</h2></div>
                 </div>
                 <div>
-                    <h2>Height:</h2>
-                    <h2>{height}</h2>
+                    <div><h2>Mass</h2></div>
+                    <div><h2>{mass}</h2></div>
+                    
+                    
+                </div>
+                <div >
+                    <div><h2>Hair Color</h2></div>
+                    <div><h2>{hair_color}</h2></div>
+                </div>
+                <div >
+                    <div><h2>Eye Color</h2></div>
+                    <div><h2>{eye_color}</h2></div>
                 </div>
                 <div>
-                    <h2>Mass</h2>
-                    <h2>{mass}</h2>
+                    <div><h2>Skin Color</h2></div>
+                    <div><h2>{skin_color}</h2></div>
                 </div>
             </div>
-            <Link onClick = {clearStoreData} to = "/">Go Back</Link>
         </div>
     );
 };

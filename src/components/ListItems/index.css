@@ -1,6 +1,6 @@
 .search-list{
     width: 400px;
-    padding: 16px 24px;
+    padding: 10px 24px;
     display: flex;
     /* align-items: center; */
     align-items: flex-start;
@@ -9,11 +9,14 @@
     color: #f2f2f2;
     border-radius: 25px;
 }
-.search-list:hover{
+.search-list:hover,.active-list{
     cursor: pointer;
-    background-color: darkgoldenrod;
+    background-color:#FEE93A;
     color: black;
     border-radius: 0;
+}
+.search-list:hover div:nth-child(1) > span,.search-list:hover > div:nth-child(2) > p:nth-child(1){
+    color:green;
 }
 .search-list > div > p{
     margin: 0;
@@ -23,9 +26,12 @@
     font-size: 12px;
     margin: 0;
 }
-.search-list div:nth-child(2) > p{
+.search-list> div:nth-child(2) > p:nth-child(1){
     color: grey;
     font-size: 15px;
+}
+.active-list div:nth-child(1) > span,.active-list > div:nth-child(2) > p:nth-child(1){
+    color:green;
 }
 @media only screen and (max-width: 768px){
     .search-list{
